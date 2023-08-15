@@ -1,5 +1,11 @@
-<ul>
-  <% @tasks.each do |task| %>
-    <li><%= link_to task.title, task_path(task)%></li>
-  <% end %>
-</ul>
+<h1>To dos</h1>
+<div class="container justify-content center">
+  <div class="card text-align-center">
+    <ul>
+      <% @tasks.each do |task| %>
+        <li><%= link_to task.title, task_path(task)%></li>
+      <% end %>
+    </ul>
+  </div>
+  <%=link_to "add Task", new_task_path%></button>
+</div>
